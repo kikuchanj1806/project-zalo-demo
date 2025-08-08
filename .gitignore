@@ -1,5 +1,18 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# -- Ignore mọi file .env --
+# (và cả .env.local, .env.development, v.v.)
+*.env
+*.env.*
 
+# Nếu bạn chỉ dùng .env ở từng app:
+apps/*/.env
+apps/*/.env.*
+
+# -- Ignore các file environment trong Angular apps --
+# (ví dụ environment.ts, environment.prod.ts, v.v.)
+apps/*/src/environments/environment.ts
+apps/*/src/environments/environment.prod.ts
+
+# -- Các ignore khác (giữ nguyên từ trước) --
 # Compiled output
 /dist
 /tmp
@@ -40,4 +53,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-.env
