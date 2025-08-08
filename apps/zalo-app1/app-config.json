@@ -1,0 +1,15 @@
+{
+  "app": {
+    "title": "tiny shop",
+    "textColor": "black",
+    "headerColor": "#0b2e69",
+    "statusBar": "normal",
+    "actionBarHidden": true,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": true,
+    "selfControlLoading": false
+  },
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": []
+}

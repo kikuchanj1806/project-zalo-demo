@@ -1,0 +1,97 @@
+<div class="min-h-full bg-section">
+  <div class="bg-background pt-2">
+    <app-search-bar></app-search-bar>
+    <div class="p-2">
+      <app-slide
+        [items]="slides"
+        [config]="{
+          showNavigation: false
+        }">
+      </app-slide>
+    </div>
+    <div class="bg-background mt-2">
+      <div class="bg-background pt-1">
+        <div class="d-flex align-items-center justify-content-between px-2">
+          <div class="text-sm font-medium p-2 truncate">Danh mục sản phẩm</div>
+          <a class="text-sm font-medium text-primary flex items-center space-x-1 p-2 cursor-pointer flex-none"
+             [routerLink]="'/categories'">
+            <span>Xem thêm</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.64642 2.64297C5.84168 2.44771 6.15826 2.44771 6.35352 2.64297L11.3535 7.64297C11.5488 7.83823 11.5488 8.15481 11.3535 8.35007L6.35352 13.3501C6.15826 13.5453 5.84168 13.5453 5.64642 13.3501C5.45115 13.1548 5.45115 12.8382 5.64642 12.643L10.2929 7.99652L5.64642 3.35007C5.45115 3.15481 5.45115 2.83823 5.64642 2.64297Z"
+                    fill="currentColor"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="pt-1 pb-4 d-flex space-x-6 overflow-x-auto px-2">
+          <a class="d-flex flex-col align-items-center cursor-pointer"
+             href="/category/1">
+            <img src="https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
+                 class="w-70 h-70 object-cover rounded-full img-category"
+                 alt="Áo len">
+            <div class="text-center text-sm w-full line-clamp-2 text-subtitle">Áo len</div>
+          </a>
+          <a class="d-flex flex-col align-items-center ms-2 cursor-pointer"
+             href="/category/1">
+            <img src="https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
+                 class="w-70 h-70 object-cover rounded-full img-category"
+                 alt="Áo len">
+            <div class="text-center text-sm w-full line-clamp-2 text-subtitle">Áo len</div>
+          </a>
+          <a class="d-flex flex-col align-items-center ms-2 cursor-pointer"
+             href="/category/1">
+            <img src="https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
+                 class="w-70 h-70 object-cover rounded-full img-category"
+                 alt="Áo len">
+            <div class="text-center text-sm w-full line-clamp-2 text-subtitle">Áo len</div>
+          </a>
+          <a class="d-flex flex-col align-items-center ms-2 cursor-pointer"
+             href="/category/1">
+            <img src="https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
+                 class="w-70 h-70 object-cover rounded-full img-category"
+                 alt="Áo len">
+            <div class="text-center text-sm w-full line-clamp-2 text-subtitle">Áo len</div>
+          </a>
+          <a class="d-flex flex-col align-items-center ms-2 cursor-pointer"
+             href="/category/1">
+            <img src="https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
+                 class="w-70 h-70 object-cover rounded-full img-category"
+                 alt="Áo len">
+            <div class="text-center text-sm w-full line-clamp-2 text-subtitle">Áo len</div>
+          </a>
+          <a class="d-flex flex-col align-items-center ms-2 cursor-pointer"
+             href="/category/1">
+            <img src="https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
+                 class="w-70 h-70 object-cover rounded-full img-category"
+                 alt="Áo len">
+            <div class="text-center text-sm w-full line-clamp-2 text-subtitle">Áo len</div>
+          </a>
+          <a class="d-flex flex-col align-items-center ms-2 cursor-pointer"
+             href="/category/1">
+            <img src="https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
+                 class="w-70 h-70 object-cover rounded-full img-category"
+                 alt="Áo len">
+            <div class="text-center text-sm w-full line-clamp-2 text-subtitle">Áo len</div>
+          </a>
+          <a class="d-flex flex-col align-items-center ms-2 cursor-pointer"
+             href="/category/1">
+            <img src="https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
+                 class="w-70 h-70 object-cover rounded-full img-category"
+                 alt="Áo len">
+            <div class="text-center text-sm w-full line-clamp-2 text-subtitle">Áo len</div>
+          </a>
+          <a class="d-flex flex-col align-items-center ms-2 cursor-pointer"
+             href="/category/1">
+            <img src="https://stc-zmp.zadn.vn/zaui-fashion/category/ao-len.webp"
+                 class="w-70 h-70 object-cover rounded-full img-category"
+                 alt="Áo len">
+            <div class="text-center text-sm w-full line-clamp-2 text-subtitle">Áo len</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-background pt-1">
+      <app-product-list></app-product-list>
+    </div>
+  </div>
+</div>

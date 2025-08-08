@@ -1,0 +1,35 @@
+<div class="header-color h-14 w-100 d-flex align-items-center px-2 py-2">
+  <ng-container *ngIf="showGreeting; else backTpl">
+    <div class="user-header rounded d-flex align-items-center">
+      <img
+        [src]="(userInfo && userInfo.avatar) ? userInfo.avatar : 'assets/img/avatar-placeholder.jpg'"
+        alt="{{ userInfo && userInfo.name ? userInfo.name : ''}}"
+        class="rounded-circle me-2"
+        width="48" height="48"
+      >
+      <div class="text-white">
+        <ng-container *ngIf="userInfo && userInfo.name; else guestTpl">
+          <div>{{ userInfo.name }}</div>
+        </ng-container>
+        <ng-template #guestTpl>
+          <div class="small">Xin chào,</div>
+          <div class="fw-bold">Guest</div>
+        </ng-template>
+      </div>
+    </div>
+  </ng-container>
+
+  <!-- back mode -->
+  <ng-template #backTpl>
+    <div class="d-flex align-items-center back-header px-1 py-2">
+      <button
+        type="button"
+        class="btn btn-link text-white p-0 me-3 back-button"
+        (click)="onBack()"
+      >
+        <i class="fa fa-arrow-left fa-lg"></i>
+      </button>
+      <div class="mb-0 text-white">{{ title }}</div>
+    </div>
+  </ng-template>
+</div>

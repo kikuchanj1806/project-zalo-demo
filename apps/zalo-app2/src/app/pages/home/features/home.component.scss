@@ -1,0 +1,122 @@
+.card-user {
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 420px;
+  margin: 2rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.card-not-login {
+  background-image: url('/assets/img/banner-fly-shop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-user .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.card-user .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.card-user .user-info img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.card-user .user-info .name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.card-user .user-info .role {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.card-user .points {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-user .points span {
+  font-size: 0.875rem;
+  margin-left: 0.25rem;
+  color: #6c757d;
+}
+
+.card-user .card-header i.bi-chevron-right {
+  color: #adb5bd;
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.card-user .card-body {
+  background-color: #fff;
+  padding: 1rem 0.5rem 1rem;
+}
+
+.card-user .actions {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.card-user .actions .action-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+.card-user .actions .action-btn i {
+  font-size: 1.75rem;
+  color: #0b2e69;
+}
+
+.card-user .actions .action-btn span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #212529;
+}
+
+.btn-login {
+  background-color: #ffffff;
+  color: #212529;
+  border: none;
+  border-radius: 0.75rem;
+  padding: .75rem 2rem;
+}
+
+.card-login__header {
+  font-size: 1.25rem;
+  color: #db5379;
+}
+
+
+///
+
+.box-product {
+  padding-top: 150px;
+}

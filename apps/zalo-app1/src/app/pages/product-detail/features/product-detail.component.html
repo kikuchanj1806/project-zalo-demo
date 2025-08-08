@@ -1,0 +1,49 @@
+<app-spinner
+  [loading]="isLoading"
+  position="position-fixed"
+  [opacity]="0.8">
+</app-spinner>
+<ng-container *ngIf="!isLoading">
+  <ng-container *ngIf="productData; else showErrorOrEmpty">
+    <div class="w-100 px-2">
+      <div class="py-2 rounded-lg">
+        <app-slide
+          [items]="imagesItem"
+          [config]="{
+          showNavigation: false
+        }">
+        </app-slide>
+      </div>
+      <div class="text-xl mb-2">{{ productData.name }}</div>
+      <div class="d-inline-block">
+        <span class="price fw-semibold text-primary">
+          {{ productData.price }} đ
+        </span>
+        <del class="old-price ms-2">{{ productData.oldPrice }} đ</del>
+      </div>
+      <div class="py-2">
+        <app-share-button
+          [payload]="{
+          title: productData.name,
+          thumbnail: productData.image,
+          path: '/product/detail/?id=' + productData.id
+        }"
+        ></app-share-button>
+      </div>
+
+      <div class="py-2">
+        <p>Chi tiết sản phẩm</p>
+
+        <div>
+          {{ productData.content }}
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-template #showErrorOrEmpty>
+  <p class="alert alert-danger">
+    {{ errorMessage || 'Không tìm thấy sản phẩm.' }}
+  </p>
+</ng-template>

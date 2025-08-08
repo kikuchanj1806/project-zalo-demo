@@ -1,0 +1,238 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "zalo-app1": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/zalo-app1",
+      "sourceRoot": "apps/zalo-app1/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "dist/zalo-app1",
+            "index": "apps/zalo-app1/src/index.html",
+            "main": "apps/zalo-app1/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "apps/zalo-app1/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/zalo-app1/src/favicon.ico",
+              "apps/zalo-app1/src/assets",
+              {
+                "glob": "app-config.json",
+                "input": "apps/zalo-app1",
+                "output": "/"
+              }
+            ],
+            "styles": [
+              "node_modules/swiper/swiper-bundle.css",
+              "apps/zalo-app1/src/assets/css/all.min.css",
+              "apps/zalo-app1/src/assets/fontawesome/all.min.css",
+              "apps/zalo-app1/src/styles.scss"
+            ],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "webpack.extra.js"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none",
+              "fileReplacements": [
+                {
+                  "replace": "apps/zalo-app1/src/environments/environment.ts",
+                  "with": "apps/zalo-app1/src/environments/environment.prod.ts"
+                }
+              ],
+              "index": "apps/zalo-app1/src/index-pro.html"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "zalo-app1:build:production"
+            },
+            "development": {
+              "buildTarget": "zalo-app1:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "zalo-app1:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "apps/zalo-app1/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/zalo-app1/src/favicon.ico",
+              "apps/zalo-app1/src/assets"
+            ],
+            "styles": [
+              "node_modules/swiper/swiper-bundle.css",
+              "apps/zalo-app1/src/assets/css/all.min.css",
+              "apps/zalo-app1/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "zalo-app2": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/zalo-app2",
+      "sourceRoot": "apps/zalo-app2/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "dist/zalo-app2",
+            "index": "apps/zalo-app2/src/index.html",
+            "main": "apps/zalo-app2/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "apps/zalo-app2/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/zalo-app2/src/favicon.ico",
+              "apps/zalo-app2/src/assets",
+              {
+                "glob": "app-config.json",
+                "input": "apps/zalo-app2",
+                "output": "/"
+              }
+            ],
+            "styles": [
+              "node_modules/swiper/swiper-bundle.css",
+              "apps/zalo-app1/src/assets/css/all.min.css",
+              "apps/zalo-app1/src/assets/fontawesome/all.min.css",
+              "apps/zalo-app1/src/styles.scss"
+            ],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "webpack.extra.js"
+            }
+
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "none",
+              "fileReplacements": [
+                {
+                  "replace": "apps/zalo-app2/src/environments/environment.ts",
+                  "with": "apps/zalo-app2/src/environments/environment.prod.ts"
+                }
+              ],
+              "index": "apps/zalo-app1/src/index-pro.html"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "zalo-app2:build:production"
+            },
+            "development": {
+              "buildTarget": "zalo-app2:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "zalo-app2:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "apps/zalo-app2/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/zalo-app2/src/favicon.ico",
+              "apps/zalo-app2/src/assets"
+            ],
+            "styles": [
+              "node_modules/swiper/swiper-bundle.css",
+              "apps/zalo-app2/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "1133383e-60cb-449d-b031-378fdfc1071b"
+  }
+}

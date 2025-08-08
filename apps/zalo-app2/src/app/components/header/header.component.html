@@ -1,0 +1,28 @@
+<div class="header-color h-14 w-100 d-flex align-items-center px-2 py-1">
+  <ng-container *ngIf="showGreeting; else backTpl">
+    <ng-container *ngIf="shopInfo.name">
+      <div class="w-100 d-flex align-items-center">
+        <div class="box-logo">
+          <img src="{{ shopInfo.logoUrl }}" alt="{{ shopInfo.name }}" class="logo"/>
+        </div>
+        <div class="box-search ms-2">
+          <app-c-search></app-c-search>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <!-- back mode -->
+  <ng-template #backTpl>
+    <div class="d-flex align-items-center back-header px-1 py-2">
+      <button
+        type="button"
+        class="btn btn-link text-black p-0 me-3 back-button"
+        (click)="onBack()"
+      >
+        <i class="fa fa-arrow-left fa-lg"></i>
+      </button>
+      <div class="mb-0 text-black">{{ title }}</div>
+    </div>
+  </ng-template>
+</div>

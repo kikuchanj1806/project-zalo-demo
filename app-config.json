@@ -1,0 +1,27 @@
+{
+  "app": {
+    "title": "fly shop",
+    "headerColor": "#ffffff",
+    "textColor": "black",
+    "statusBar": "normal",
+    "actionBarHidden": true,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": true,
+    "selfControlLoading": false
+  },
+  "listCSS": [
+    "styles.css"
+  ],
+  "listSyncJS": [
+    "runtime.js",
+    "polyfills.js",
+    "main.js"
+  ],
+  "listAsyncJS": [
+    "118.js",
+    "355.js",
+    "437.js",
+    "607.js",
+    "700.js"
+  ]
+}
