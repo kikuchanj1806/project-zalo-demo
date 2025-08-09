@@ -12,8 +12,6 @@
  *    + Step 2: environment.apiUrl: điền link dev muốn call api tới
  *      + production: true
  *      + zaloBaseHref: '/zapps/app-id/'
- *
- * @author ToanNV
  * */
 
 export const environment = {
