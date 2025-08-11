@@ -74,10 +74,10 @@ export class AppFooterComponent implements OnInit, OnDestroy {
    * Array of navigation items; default example set
    */
   @Input() items: FooterItem[] = [
-    {path: '/', iconClass: 'fal fa-house', label: 'Trang chủ'},
-    {path: '/categories', iconClass: 'fal fa-th', label: 'Danh mục'},
-    {path: '/cart', iconClass: 'fal fa-shopping-cart', label: 'Giỏ hàng'},
-    {path: '/user/profile', iconClass: 'fal fa-user', label: 'Thành viên'}
+    {path: '/', iconClass: 'fas fa-house', label: 'Trang chủ'},
+    {path: '/categories', iconClass: 'fas fa-th', label: 'Danh mục'},
+    {path: '/cart', iconClass: 'fas fa-shopping-cart', label: 'Giỏ hàng'},
+    {path: '/user/profile', iconClass: 'fas fa-user', label: 'Thành viên'}
   ];
   isProductDetail = false;
   private destroy$ = new Subject<void>();

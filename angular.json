@@ -29,16 +29,17 @@
               "apps/zalo-app1/src/favicon.ico",
               "apps/zalo-app1/src/assets",
               {
-                "glob": "app-config.json",
-                "input": "apps/zalo-app1",
-                "output": "/"
+                "glob": "**/*",
+                "input": "libs/assets/fontawesome",
+                "output": "/assets/fontawesome"
               }
             ],
             "styles": [
               "node_modules/swiper/swiper-bundle.css",
               "apps/zalo-app1/src/assets/css/all.min.css",
-              "apps/zalo-app1/src/assets/fontawesome/all.min.css",
-              "apps/zalo-app1/src/styles.scss"
+              "libs/assets/fontawesome/all.min.css",
+              "apps/zalo-app1/src/styles.scss",
+              "apps/zalo-app1/src/styles/my.style.scss"
             ],
             "scripts": [],
             "customWebpackConfig": {
@@ -143,16 +144,17 @@
               "apps/zalo-app2/src/favicon.ico",
               "apps/zalo-app2/src/assets",
               {
-                "glob": "app-config.json",
-                "input": "apps/zalo-app2",
-                "output": "/"
+                "glob": "**/*",
+                "input": "libs/assets/fontawesome",
+                "output": "/assets/fontawesome"
               }
             ],
             "styles": [
               "node_modules/swiper/swiper-bundle.css",
-              "apps/zalo-app1/src/assets/css/all.min.css",
-              "apps/zalo-app1/src/assets/fontawesome/all.min.css",
-              "apps/zalo-app1/src/styles.scss"
+              "apps/zalo-app2/src/assets/css/all.min.css",
+              "libs/assets/fontawesome/all.min.css",
+              "apps/zalo-app2/src/styles.scss",
+              "apps/zalo-app2/src/styles/my.style.scss"
             ],
             "scripts": [],
             "customWebpackConfig": {
