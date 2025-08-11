@@ -1,8 +1,8 @@
 {
   "app": {
-    "title": "fly shop",
-    "headerColor": "#ffffff",
+    "title": "tiny shop",
     "textColor": "black",
+    "headerColor": "#0b2e69",
     "statusBar": "normal",
     "actionBarHidden": true,
     "hideAndroidBottomNavigationBar": false,
@@ -18,10 +18,10 @@
     "main.js"
   ],
   "listAsyncJS": [
-    "118.js",
-    "355.js",
-    "437.js",
+    "142.js",
+    "397.js",
     "607.js",
-    "700.js"
+    "938.js",
+    "944.js"
   ]
 }

@@ -85,14 +85,16 @@
 ### Config môi trường deploy zalo app
 - Cần truy cập developers.zalo.me để tạo app trước khi thực hiện các bước tiếp theo
 - Trỏ vào app cần config để thực hiện khởi tạo môi trường `zmp init` (thực hiện theo các bước, Lưu ý với bước "What action you want to do?" thì cần chọn "Using ZMP to deploy only" vì dự án hiện đang là dạng chuyển đổi 1 web app thành zalo mini app ) => sau khi chạy xong lệnh thì app sẽ tự tạo app-config và .env
-- Gõ lệnh `zmp deploy` để thực hiện deploy app lên zalo.
+- Gõ lệnh `zmp deploy` để thực hiện deploy app lên zalo.(Thực hiện ở root của project, và lưu ý chỉ thực hiện deploy sau khi đã build production)
   - step1: Chọn deploy your existing project
   - step2: Where is your dist folder? => dist/zalo-app1 (trỏ tới static file)
   - step3: Có 2 option là Development và Testing
     - Development: Sẽ build ứng dụng và tạo ra một mã QR code để bạn có thể scan và test được trên tài khoản zalo sở hữu app. Lưu ý giới hạn 300 phiên bản trong 1 tháng
     - Testing: Sẽ upload ứng dụng lên zalo mini app và có thể share cho user(được cấp quyền) có thể testing. Lưu ý giới hạn 60 phiên bản trong 1 tháng
   - step4: Nhập mô tả deploy
-- Lưu ý: Cần thực hiện build production trước khi deploy zalo app
+- Lưu ý: 
+  - Cần thực hiện build production trước khi deploy zalo app
+  - zmp init chỉ chạy 1 lần duy nhất ở bước khởi tạo app (trường hợp muốn update lại config app thì mới thực hiện khởi tạo lại)
 
 ### Build production server
 - Gõ lệnh `npm run build:app1:prod` sau khi build code sẽ được để trong thư mục `dist/`.
